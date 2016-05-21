@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Local Storage/Associative Arrays</title>
+</head>
+<script>
+//This function is storing the superhero array and then spits out the data that was saved in local storage
+function storeditems(){
+var	superhero= [" Captain America ", " Thor ", " Iron Man ", " Black Widow ", " Hulk ", " Falcon "];
+	localStorage.setItem("heros",JSON.stringify(superhero));
+	var getData = localStorage.getItem("heros");
+	var sh = JSON.parse(getData);
+      alert(sh);
+}
+	
+</script>
+
+
+<body >
+<form >  
+
+<button onclick="storeditems()"> Heros! </button> 
+
+</form>
+
+<p>To view the array that it has been saved. You can look by right clicking -> resources -> Local Storage</p>
+
+
+</body>
+</html>
