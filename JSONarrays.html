@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSONarrays</title>
+</head>
+<body>
+<div id="comiclist"></div>
+<script type="text/javascript">
+var marvel = [
+	{"name" : "Spider-Man"},
+	{"name" : "MockingBird"},
+	{"name" : "Gamora"},
+	{"name" : "Groot"},
+	{"name" : "Drax the Destroyer"},
+	{"name" : "Rocket Raccoon"}
+];
+
+list(marvel);
+function list(arr) {
+	var print = "";
+	var i;
+	for(i=0; i < arr.length; i++){
+		print += arr[i].name + "<br>";
+	}
+	document.getElementById("comiclist").innerHTML = print;
+}
+
+              
+
+</script>
+</body>
+</html>
